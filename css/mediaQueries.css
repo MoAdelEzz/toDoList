@@ -1,0 +1,110 @@
+@media (min-width: 1440px)
+{
+    .addTaskContainer
+    {
+        width: 35%;
+        left: 640px;
+    }
+}
+/*=================================================================*/
+
+@media (min-width: 1024px) and (max-width: 1439px)
+{
+    .addTaskContainer
+    {   
+        width: 45%;
+        left: 350px;
+    }
+}
+/*=================================================================*/
+
+@media (min-width: 768px) and (max-width: 1023px)
+{
+    .addTaskContainer
+    {   
+        width: 60%;
+        left: 160px;
+    }
+    .task .time
+    {
+        width: 25%;
+    }
+    .task .deleteIcon
+    {
+        right: 8%;
+        top: 30%;
+        opacity: 1;
+    }
+    .task .deleteIcon img
+    {
+        width: 40px;
+    }
+
+    .task:hover .deleteIcon
+    {
+        animation: none;
+    }
+
+
+}
+/*=================================================================*/
+
+@media (max-width: 767px)
+{
+    .dateContainer h1, .dateContainer h4
+    {
+        font-size: 15px;
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+        display: block;
+    }
+    .task
+    {
+        padding-left: 10px;
+        height: auto;
+    }
+
+    .task .time
+    {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .time::placeholder
+    {   
+        font-size: 20px;
+        color: gray;
+    }
+    .task input 
+    {
+        font-size: 20px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .addTaskContainer
+    {
+        display: none;
+    }
+    .addButton
+    {
+        width: 40px;
+        height: 40px;
+        bottom: -20px;
+        left: 43%;
+    }
+    .task .deleteIcon
+    {
+        right: 8%;
+        top: 30%;
+        opacity: 1;
+    }
+    .task .deleteIcon img
+    {
+        width: 30px;
+    }  
+    .task:hover .deleteIcon
+    {
+        animation: none;
+    }
+}

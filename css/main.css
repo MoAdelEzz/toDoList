@@ -1,0 +1,275 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    transition: all 1s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body
+{
+    background-color: #D7EDF3;
+    overflow: hidden;
+}
+
+/* =-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-=*/
+
+.listContainer
+{
+    width: 70%;
+    height: 800px;
+
+    
+    margin: 50px auto;
+    padding: 4px;
+
+}
+
+.dateContainer
+{
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    background-image: linear-gradient(to right, #2DE6EE, #4EB8F1);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    line-height: 105px;
+    padding-bottom: 1px;
+
+}
+
+.dateContainer h1, .dateContainer h4
+{
+    display: inline;
+
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    margin-left: 70px;
+    text-align: center;
+}
+
+.addTaskContainer
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px ;
+
+    width: 30%;
+    border: 1px solid transparent;
+
+    position: relative;
+    left: 65%;
+
+    margin-bottom: 10px;
+
+}
+
+.addTaskContainer:hover
+{
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+
+.dateContainer .addTaskContainer h4
+{
+    display: block;
+    font-size: 30px;
+
+
+    width: 61%;
+    margin: 0px;
+    text-align: right;
+
+}
+
+.Icon
+{
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 21%;
+}
+
+
+.tasksContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    background-color: white;
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.task
+{
+    width: 100%;
+    height: 140px;
+
+    padding-left: 70px;
+    padding-top: 20px;
+
+    background-color: white;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    border-bottom: 1px solid grey;
+
+    font-size: 30px;
+    
+    position: relative;
+    left:0px;
+
+    opacity: 1;
+
+
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+}
+
+@keyframes animateDelete
+{
+    0%
+    {
+        left: 0px;
+        opacity: 1;
+    }
+    100%
+    {
+        left: 1000px;
+        opacity: 0;
+    }
+}
+
+.task input
+{
+    font-size: 30px;
+
+    width: 50%;
+    margin: auto;
+
+    outline: none;
+    border: none;
+}
+
+.task .time
+{
+    display: block;
+
+    width: 15%;
+    margin: 0px;
+
+    font-size: 40px;
+    color: gray;
+}
+
+
+.timeInput::placeholder
+{   
+    font-size: 30px;
+    color: gray;
+}
+
+.task .timeInput
+{   
+    font-size: 30px;
+    color: gray;
+    width: 20%;
+}
+
+.addButton
+{
+    width: 60px;
+    height: 60px;
+
+    
+    border: 2px solid black;
+
+    border-radius: 100%;
+    background-color: white;
+
+
+    position: absolute;
+    bottom: -30px;
+    left: 45%;
+    z-index: 100;
+}
+
+
+.addButton:hover
+{
+    cursor: pointer;
+}
+
+input:disabled
+{
+    background-color: transparent;
+}
+
+.BlackPlaceHolder::placeholder
+{
+    color: black;
+}
+
+.task .deleteIcon
+{
+    position: absolute;
+    right: 5%;
+
+    top: 0%;
+    opacity: 0;
+
+
+}
+
+@keyframes Appear
+{
+    0%
+    {
+        top: 0%;
+        opacity: 0;
+    }
+    100%
+    {
+        top: 25%;
+        opacity: 1;
+    }
+}
+
+.task .deleteIcon img
+{
+    width: 60px;
+}
+
+.task:hover .deleteIcon
+{
+    animation-name: Appear;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+.task .deleteIcon:hover
+{
+    cursor: pointer;
+}
