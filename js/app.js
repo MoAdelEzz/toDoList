@@ -11,9 +11,6 @@ let CurrentYear = new Date().getUTCFullYear();
 
 let Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-console.log(CurrentDay);
-console.log(CurrentMonth);
-console.log(CurrentYear);
 
 let DateContainer = document.getElementsByClassName('dateContainer')[0].getElementsByTagName('h1')[0];
 DateContainer.innerText = CurrentDay + " " + Months[CurrentMonth] + ", " + CurrentYear;
@@ -165,9 +162,6 @@ let toNum = function(key = "")
 //===========================================================================================
 document.addEventListener('keydown', (e)=>{
 
-    console.log(e.code);
-    document.getElementsByClassName('debug')[0].innerText = e.code;
-
     if (e.target.classList.contains('time'))
     {
         
@@ -235,20 +229,18 @@ document.addEventListener('keydown', (e)=>{
 
 document.addEventListener('focusout', (e)=>
 {
-
     if (e.target.classList.contains('time'))
     {
-        if (e.target.value.legnth == 5)
+        if (e.target.value.length == 5 && e.target.placeholder[2] == ":")
         {
+            console.log("entered");
             e.target.placeholder = e.target.value;
             e.target.disabled = true;
-
-            let y = e.target.parentElement.getElementsByClassName('title')[0];
-            y.focus();
-
         }
         else
         {
+            e.target.placeholder = "00:00";
+            e.target.value = ""; 
             e.target.focus();
         }
     }
