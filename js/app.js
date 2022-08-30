@@ -166,11 +166,13 @@ let toNum = function(key = "")
 document.addEventListener('keydown', (e)=>{
 
     console.log(e.code);
+    document.getElementsByClassName('debug')[0].innerText = e.code;
 
     if (e.target.classList.contains('time'))
     {
         
         let x = e.target.value;
+        
     
         if (x.length == 0 && betweenZeroTwo(e.code))
         {
@@ -260,9 +262,6 @@ document.addEventListener('focusout', (e)=>
         e.target.disabled = true;
     }
 });
-
-
-
 
 
 
