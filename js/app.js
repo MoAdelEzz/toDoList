@@ -235,6 +235,7 @@ document.addEventListener('focusout', (e)=>
         {
             console.log("entered");
             e.target.placeholder = e.target.value;
+            sortByDate();
             e.target.disabled = true;
         }
         else
