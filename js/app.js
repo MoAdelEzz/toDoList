@@ -124,7 +124,7 @@ document.addEventListener('click', function(e){
 );
 
 //============================================================================================
-document.addEventListener('keydown', (e)=>{
+document.addEventListener('keypress', (e)=>{
 
     if (e.target.classList.contains('time'))
     {
